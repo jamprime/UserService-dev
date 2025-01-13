@@ -6,7 +6,6 @@ import school.faang.user_service.dto.skill.SkillDto;
 
 import java.util.List;
 
-@Service
 public interface SkillService {
 
     SkillDto create(SkillDto skill);
