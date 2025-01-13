@@ -12,7 +12,7 @@ public class SkillValidator {
 
     public void validateSkill(SkillDto skill) {
 
-        if (skill.title == null || skill.title.isEmpty()) {
+        if (skill.getTitle() == null || skill.getTitle().isEmpty()) {
             throw new DataValidationException("Can not create skill without title");
         }
     }
