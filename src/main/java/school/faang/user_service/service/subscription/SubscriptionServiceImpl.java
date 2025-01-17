@@ -8,7 +8,9 @@ import school.faang.user_service.exception.DataValidationException;
 import school.faang.user_service.mapper.UserMapper;
 import school.faang.user_service.repository.SubscriptionRepository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 @Service
@@ -41,7 +43,7 @@ public class SubscriptionServiceImpl implements SubscriptionService{
     }
 
     @Override
-    public int getFollowersCount(long followerId) {
+    public Integer getFollowersCount(long followerId) {
 
         return subscriptionRepository.findFolloweesAmountByFollowerId(followerId);
     }
@@ -52,11 +54,14 @@ public class SubscriptionServiceImpl implements SubscriptionService{
         return subscriptionRepository.findByFolloweeId(followeeId).map((x) -> userMapper.toDto(x)).toList();
     }
 
-    private List<UserDto> filterUsers(UserFilterDto filters, List<UserDto> list) {
+    public List<UserDto> filterUsers(UserFilterDto filters, List<UserDto> list) {
 
-        if (filters == null)
-            return list;
+        return list;
+    }
 
-        return list.stream().filter(x -> x.equals(userMapper.toEntity(filters))).toList();
+    @Override
+    public Integer getFollowingCount(long followerId) {
+
+        return subscriptionRepository.findFolloweesAmountByFollowerId(followerId);
     }
 }

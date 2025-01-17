@@ -10,8 +10,9 @@ public interface SubscriptionService {
 
     void unfollowUser(long followerId, long followeeId);
 
-    int getFollowersCount(long followerId);
+    Integer getFollowersCount(long followerId);
 
     List<UserDto> getFollowing(long followeeId);
 
+    Integer getFollowingCount(long followerId);
 }
