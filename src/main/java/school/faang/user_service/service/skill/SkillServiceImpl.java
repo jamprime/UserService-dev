@@ -22,11 +22,11 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SkillServiceImpl implements SkillService{
 
-    private SkillRepository skillRepository;
-    private SkillMapper skillMapper;
-    private SkillOfferRepository skillOfferRepository;
-    private UserSkillGuaranteeRepository skillGuaranteeRepository;
-    private UserRepository userRepository;
+    private final SkillRepository skillRepository;
+    private final SkillMapper skillMapper;
+    private final SkillOfferRepository skillOfferRepository;
+    private final UserSkillGuaranteeRepository skillGuaranteeRepository;
+    private final UserRepository userRepository;
 
     @Override
     public SkillDto create(SkillDto skill) {

@@ -14,7 +14,7 @@ public class RecommendationValidator {
 
         if (recommendation.getContent().isEmpty()) {
 
-            throw new DataValidationException("recommendation can't br empty");
+            throw new DataValidationException("Recommendation can't be empty");
         }
 
     }

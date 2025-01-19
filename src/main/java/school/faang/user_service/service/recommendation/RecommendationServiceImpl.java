@@ -20,9 +20,9 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class RecommendationServiceImpl implements RecommendationService{
 
-    private RecommendationRepository recommendationRepository;
-    private SkillOfferRepository skillOfferRepository;
-    private SkillRepository skillRepository;
+    private final RecommendationRepository recommendationRepository;
+    private final SkillOfferRepository skillOfferRepository;
+    private final SkillRepository skillRepository;
 
     public Recommendation create(RecommendationDto recommendationDto) {
 
