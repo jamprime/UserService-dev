@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import school.faang.user_service.dto.event.EventDto;
 import school.faang.user_service.dto.event.EventFilterDto;
 import school.faang.user_service.service.event.EventService;
-import school.faang.user_service.service.event.EventServiceImpl;
 
 import java.util.List;
 
