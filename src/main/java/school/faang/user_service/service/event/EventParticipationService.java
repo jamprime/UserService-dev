@@ -1,6 +1,6 @@
 package school.faang.user_service.service.event;
 
-import school.faang.user_service.entity.User;
+import school.faang.user_service.dto.user.UserDto;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public interface EventParticipationService {
 
     void unregisterParticipant(long eventId, long userId);
 
-    List<User> getParticipant(long eventId);
+    List<UserDto> getParticipant(long eventId);
 
     int getParticipantsCount(long eventId);
 }
